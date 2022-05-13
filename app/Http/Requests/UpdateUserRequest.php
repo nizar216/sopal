@@ -22,7 +22,7 @@ class UpdateUserRequest extends FormRequest
             'name'    => [
                 'required',
             ],
-            'email'   => [
+            'matricule'   => [
                 'required',
             ],
             'roles.*' => [

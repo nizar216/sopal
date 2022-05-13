@@ -28,18 +28,10 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.user.fields.email') }}
+                            Matricule
                         </th>
                         <td>
-                            {{ $user->email }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.user.fields.email_verified_at') }}
-                        </th>
-                        <td>
-                            {{ $user->email_verified_at }}
+                            {{ $user->matricule }}
                         </td>
                     </tr>
                     <tr>
@@ -54,8 +46,8 @@
                     </tr>
                 </tbody>
             </table>
-            <a style="margin-top:20px;" class="btn btn-default" href="{{ url()->previous() }}">
-                {{ trans('global.back_to_list') }}
+            <a style="margin-top:20px;" class="btn btn-default" href="/admin/users">
+                retourner
             </a>
         </div>
 

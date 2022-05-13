@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('content')
+<style>
+body {color:black;background-color:white;background-image:url("https://www.histoiredesfax.com/wp-content/uploads/2020/01/Sopal-change-son-logo-et-renouvelle-sa-vision-2020.jpg");}
+</style>
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card-group">
@@ -12,7 +15,7 @@
                     @endif
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
-                        <h1>{{ trans('panel.site_title') }}</h1>
+                        <h1>Authentification</h1>
                         <p class="text-muted">{{ trans('global.login') }}</p>
 
                         <div class="input-group mb-3">
@@ -21,10 +24,10 @@
                                     <i class="fa fa-user"></i>
                                 </span>
                             </div>
-                            <input name="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" required autofocus placeholder="{{ trans('global.login_email') }}" value="{{ old('email', null) }}">
-                            @if($errors->has('email'))
+                            <input name="matricule" type="text" class="form-control{{ $errors->has('matricule') ? ' is-invalid' : '' }}" required autofocus placeholder="matricule" value="{{ old('matricule', null) }}">
+                            @if($errors->has('matricule'))
                                 <div class="invalid-feedback">
-                                    {{ $errors->first('email') }}
+                                    {{ $errors->first('matricule') }}
                                 </div>
                             @endif
                         </div>
@@ -39,15 +42,6 @@
                                     {{ $errors->first('password') }}
                                 </div>
                             @endif
-                        </div>
-
-                        <div class="input-group mb-4">
-                            <div class="form-check checkbox">
-                                <input class="form-check-input" name="remember" type="checkbox" id="remember" style="vertical-align: middle;" />
-                                <label class="form-check-label" for="remember" style="vertical-align: middle;">
-                                    {{ trans('global.remember_me') }}
-                                </label>
-                            </div>
                         </div>
 
                         <div class="row">

@@ -22,16 +22,16 @@
                     {{ trans('cruds.user.fields.name_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                <label for="email">{{ trans('cruds.user.fields.email') }}*</label>
-                <input type="email" id="email" name="email" class="form-control" value="{{ old('email', isset($user) ? $user->email : '') }}" required>
-                @if($errors->has('email'))
+            <div class="form-group {{ $errors->has('matricule') ? 'has-error' : '' }}">
+                <label for="matricule">Matricule*</label>
+                <input type="matricule" id="matricule" name="matricule" class="form-control" value="{{ old('matricule', isset($user) ? $user->matricule : '') }}" required>
+                @if($errors->has('matricule'))
                     <em class="invalid-feedback">
-                        {{ $errors->first('email') }}
+                        {{ $errors->first('matricule') }}
                     </em>
                 @endif
                 <p class="helper-block">
-                    {{ trans('cruds.user.fields.email_helper') }}
+                    
                 </p>
             </div>
             <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }}">

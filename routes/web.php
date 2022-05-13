@@ -18,22 +18,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
     Route::resource('users', 'UsersController');
 
-    // Services
-    Route::delete('services/destroy', 'ServicesController@massDestroy')->name('services.massDestroy');
-    Route::resource('services', 'ServicesController');
+    // Categories
+    Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
+    Route::resource('categories', 'CategoriesController');
 
-    // Employees
-    Route::delete('employees/destroy', 'EmployeesController@massDestroy')->name('employees.massDestroy');
-    Route::post('employees/media', 'EmployeesController@storeMedia')->name('employees.storeMedia');
-    Route::resource('employees', 'EmployeesController');
+    // Locals
+    Route::delete('locals/destroy', 'LocalsController@massDestroy')->name('locals.massDestroy');
+    Route::resource('locals', 'LocalsController');
 
-    // Clients
-    Route::delete('clients/destroy', 'ClientsController@massDestroy')->name('clients.massDestroy');
-    Route::resource('clients', 'ClientsController');
-
-    // Appointments
-    Route::delete('appointments/destroy', 'AppointmentsController@massDestroy')->name('appointments.massDestroy');
-    Route::resource('appointments', 'AppointmentsController');
-
-    Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });

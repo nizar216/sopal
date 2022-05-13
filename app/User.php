@@ -19,26 +19,21 @@ class User extends Authenticatable
     public $table = 'users';
 
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password'
     ];
 
     protected $dates = [
         'updated_at',
         'created_at',
-        'deleted_at',
-        'email_verified_at',
+        'deleted_at'
     ];
 
     protected $fillable = [
         'name',
-        'email',
         'password',
         'created_at',
         'updated_at',
-        'deleted_at',
-        'remember_token',
-        'email_verified_at',
+        'deleted_at'
     ];
 
     protected function serializeDate(\DateTimeInterface $date)
